@@ -128,3 +128,7 @@ Instalocking is a bannable offense. You likely won't get banned unless you go ar
 - [munibug](https://www.twitch.tv/munibug) gif by [@walfieee](https://twitter.com/walfieee)
 - Application Icon and Favicon by [u/Odeuo](https://www.reddit.com/user/Odeuo/)
 - Some of the agent previews and banners come from unknown sources, let me know if you find their sources!
+
+## Legal
+This is not affiliated with Riot Games.
+If you are a representative of Riot and wish to have this repository taken down, please reach out to me on my email from an official mailing address.

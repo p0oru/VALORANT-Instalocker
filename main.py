@@ -276,13 +276,14 @@ def try_lock(agent):
 
         except Exception as e:
 
-            logger.error(f"Exception occurred during agent locking: {str(e)}")
-            logger.exception("Stack trace:")
-
             if "pre-game" not in str(e):
+                logger.error(f"Exception occurred during agent locking: {str(e)}")
+                logger.exception("Stack trace:")
                 errorAlert("ERROR", str(e), 12)
                 stop_lock()
                 return
+
+            logger.debug(f"Not in pre-game yet: {str(e)}")
 
 
 @eel.expose

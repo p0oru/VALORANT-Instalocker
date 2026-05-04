@@ -3,5 +3,5 @@ psutil>=5.9.5
 pyinstaller
 requests
 screeninfo>=0.8.1
-git+https://github.com/AbgehobenSB/valclient.py.git
+valclient @ git+https://github.com/AbgehobenSB/valclient.py.git@05f0dd5c9f99e6406efd55eda7aa31d40fd4fc42
 pywin32

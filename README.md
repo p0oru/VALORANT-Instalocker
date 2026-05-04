@@ -105,7 +105,7 @@ Instalocking is a bannable offense. You likely won't get banned unless you go ar
   
 - Sometimes the instalocker waits for a few seconds after the loading screen to instalock, this is because it scans for the pre-game screen every 3 seconds. You can change the loop delay in the code for yourself.
 
-#### Notes
+### Notes
 + I am not responsible for **misuse** of this application, I do not condone using this and this only exists as an educational resource.
 
 <br>

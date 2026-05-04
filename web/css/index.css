@@ -17,6 +17,11 @@ body {
 
 }
 
+#left-panel {
+    height: 100vh;
+    overflow: hidden;
+}
+
 #agents {
 
 	transition: transform 0.25s;
@@ -24,7 +29,8 @@ body {
 
     display: flex !important;
 	flex-direction: column !important;
-    flex: 100vh !important;
+    flex: 1 1 0% !important;
+    min-height: 0;
     overflow-y: scroll;
     overflow-x: hidden;
 
@@ -115,7 +121,6 @@ body {
     #socials {
         margin-bottom: 8rem;
     }
-}
 }
 
 #agents::-webkit-scrollbar-track

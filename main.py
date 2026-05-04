@@ -21,7 +21,6 @@ SCREEN_DIMENSIONS = (
     list(get_monitors())[0].height // 1.7,
 )
 
-# Socials, don't touch! >:(
 INSTAGRAM = "https://www.instagram.com/kronsuki/"
 GITHUB = "https://github.com/SuppliedOrange/"
 
@@ -64,7 +63,9 @@ AGENT_CODES = {
     "Deadlock": "cc8b64c8-4b25-4ff9-6e7f-37b4da43d235",
     "Iso": "0e38b510-41a8-5780-5e8f-568b2a4f2d6c",
     "Vyse": "efba5359-4016-a1e5-7626-b1ae76895940",
-    "Waylay": "df1cb487-4902-002e-5c17-d28e83e78588"
+    "Waylay": "df1cb487-4902-002e-5c17-d28e83e78588",
+    "Miks": "7c8a4701-4de6-9355-b254-e09bc2a34b72",
+    "Veto": "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
 }
 
 VALORANT_PROCESS_NAMES = [
@@ -230,13 +231,11 @@ def try_lock(agent):
         logger.debug("Rechecking for pre-game...")
 
         try:
-            sessionState = client.fetch_presence(client.puuid)["sessionLoopState"]
-            
             matchID = client.pregame_fetch_match()["ID"]
 
-            logger.debug(f"Session State: {sessionState}\nMatch ID: {matchID}")
+            logger.debug(f"Match ID: {matchID}")
 
-            if sessionState == "PREGAME" and matchID not in SEEN_MATCHES:
+            if matchID not in SEEN_MATCHES:
 
                 logger.debug("Pregame found. Adding match ID to seen matches and proceeding to lock.")
 
@@ -281,7 +280,7 @@ def try_lock(agent):
             logger.exception("Stack trace:")
 
             if "pre-game" not in str(e):
-                errorAlert("ERROR", e, 12)
+                errorAlert("ERROR", str(e), 12)
                 stop_lock()
                 return
 
